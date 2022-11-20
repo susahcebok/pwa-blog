@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="Description" content="Ini adalah situs web tempat Anda dapat menambahkan foto ke bingkai.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#333">
+    <title>Twibbon Generator</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/custom.js"></script>
+    <link href="css/custom.css" rel="stylesheet">
+<style>
+label {
+  background-color: indigo;
+  color: white;
+  padding: 0.5rem;
+  font-family: sans-serif;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+#file-chosen{
+  margin-left: 0.3rem;
+  font-family: sans-serif;
+}
+</style>
+</head>
+
+<body>
+<h1>TWIBBON.TK</h1>
+<p>Ini adalah situs web tempat Anda dapat menambahkan foto ke bingkai.</p>
+
+<h2>Tutorial</h2>
+
+<p>Silahkan unggah gambar dan klik pratinjau lalu unduh, aplikasi ini akan otomatis menggabungkan unggahan gambar yang Anda pilih.</p>
+
+<p>
+<input type="file" id="actual-btn" hidden multiple/>
+<label for="actual-btn">Unggah Gambar</label>
+<button class="button big" id="dpwload" onclick="drawImage()">Pratinjau</button>
+<p id="file-chosen"></p>
+</p>
+
+<p>
+<img id="preview" src="img/no-images.png"/>
+<img id="twibbon" src="img/twibbon.png" style="display: none"/>
+<canvas id="bungferry" style="display: none"></canvas>
+</p>
+
+<p>
+<button class="button big danger" id="cancel" onclick="location.reload()">Hapus</button>
+<a class="button big" href="#" id="dpwload2" download="twibbon-by-bungferry.png" style="display: none">Unduh</a>
+</p>
+
+<h2>Twibbon Generator v.2</h2>
+  
+<p>Tambahkan tampilan yang disesuaikan ke profil Facebook hanya dalam beberapa langkah.</p>
+
+<p>Buat bingkai <a href="/twibbon">di sini</a> untuk teman dan pengikut Anda menggunakan bingkai karya seni original Anda sendiri atau pilih dari bingkai kami.</p>
+
+<p><a class="reference" target="_blank" rel="noopener" href="https://www.facebook.com/bungferry.wa">🔗 Ferry Ayunda</a></p>
+
+<script src="js/apk.js"></script>
+
+<script>
+   /*if (window.location.protocol === 'http:') {
+           window.location.protocol = 'https:';
+   }*/
+     if ('serviceWorker' in navigator) {
+           navigator.serviceWorker.register('service-worker.js')
+   }
+</script>
+
+
+</body>
+</html>
